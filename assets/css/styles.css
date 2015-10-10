@@ -1400,6 +1400,14 @@ hr{
 	margin-top: -5px;
 }
 
+#contato .local i{
+	font-size: 30px;
+}
+
+#contato .local div {
+	font-size: 18px;
+}
+
 #contato .mail-styled{
 	display: inline-block;
 	margin-bottom: 50px;
