@@ -6,7 +6,7 @@
 		Title and Meta Tags
 		=============================================== -->
 		<meta charset="utf-8" />
-		<title>Bianca Galindo - Psicóloga Aracaju Sergipe</title>
+		<title>Bianca Galindo - Psicóloga de Aracaju Sergipe</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta http-equiv="content-language" content="pt-BR" />
@@ -111,7 +111,7 @@
 						<div class="col text-header-logo">
 							<h1 class="scrollimation fade-down d1 font-bianca main-color shadow-white no-margin">Bianca</h1>
 							<h2 class="scrollimation fade-down d3 font-galindo main-color shadow-white no-margin">Galindo</h2>
-							<p class="scrollimation fade-down d4 shadow-white no-margin text-center">Pisicóloga / Psicoterapeuta</p>
+							<p class="scrollimation fade-down d4 shadow-white no-margin text-center">Psicóloga / Psicoterapeuta</p>
 						</div>
 					</div>
 				
@@ -303,7 +303,7 @@
 
 							<p class="margin-top scrollimation fade-right">A criatividade de Erickson e o seu poder de observação foram legendários e suas técnicas formaram a base de todo um estilo de procedimentos terapêuticos e hipnóticos. Ele introduziu a utilização de uma abordagem naturalista, contando estórias, aplicando técnicas de hipnose e levando o paciente a se libertar dos conflitos emocionais.</p>
 						
-							<p class="margin-top scrollimation fade-right">O modelo proposto por Milton Erickson é um conjunto de padrões verbais associados com linguagem e sugestão hipnótica que foi assim chamada em honra de Erickson. As brilhantes e inovadoras estratégias dele se tornaram o tema de numerosos congressos e conferências internacionais Seus trabalhos formam a base de muitos dos princípios e técnicas da PNL. Erickson foi um dos três terapeutas modelados por Richard Bandler e John Grinder a fim de criar as primeiras técnicas da PNL.</p>
+							<p class="margin-top scrollimation fade-right">O modelo Ericksoniano é um conjunto de padrões verbais associados com linguagem e sugestão hipnótica que foi assim chamada em honra ao seu criador, Milton Erickson. As brilhantes e inovadoras estratégias dele se tornaram o tema de numerosos congressos e conferências internacionais. Seus trabalhos formam a base de muitos dos princípios e técnicas da PNL. Erickson foi um dos três terapeutas modelados por Richard Bandler e John Grinder a fim de criar as primeiras técnicas da PNL.</p>
 							
 						</div>
 						
@@ -326,11 +326,11 @@
 					<!--==== Portfolio Filters ====-->
 					
 					<div class="text-center scrollimation fade-up">
-						<div id="filter-works" class="btn-group">
-							<button data-filter="*" type="button" class="btn btn-default active">All Items<span class="project-count"></span></button>
-							<button data-filter=".web" type="button" class="btn btn-default">Web<span class="project-count"></span></button>
-							<button data-filter=".print" type="button" class="btn btn-default">Print<span class="project-count"></span></button>
-							<button data-filter=".video" type="button" class="btn btn-default">Video<span class="project-count"></span></button>
+						<div class="btn-group">
+							<button data-filter="*" type="button" class="btn btn-default active">Todas Imagens<span class="project-count"></span></button>
+							<button data-filter=".web" type="button" class="btn btn-default">Clínica<span class="project-count"></span></button>
+							<button data-filter=".print" type="button" class="btn btn-default">Sala<span class="project-count"></span></button>
+							<button data-filter=".video" type="button" class="btn btn-default">Outras<span class="project-count"></span></button>
 						</div>
 					</div>
 					
@@ -778,6 +778,15 @@
 				</div>
 			
 			</section>
+		
+			<!-- ==============================================
+			MAP
+			=============================================== -->
+			<section id="map">
+			
+				<div id="gmap"></div>
+			
+			</section>
 			
 			<!-- ==============================================
 			FOOTER
@@ -875,7 +884,25 @@
 		<script src="assets/js/jquery.fitvids.js"></script>
 		<script src="assets/js/contact.js"></script>
 		<script src="assets/js/scripts.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 		
+		<script>
+		
+			var mapPoint = {
+					'lat': -10.91932, 
+					'lng': -37.05639,
+					'zoom' : 14,
+					'infoText':'<p>Psicóloga Bianca Galindo\
+								<br/>Especialista em Stress,\
+								<br/>Ansiedade e Relacionamento</p>',
+					'linkText':'Veja no Google Maps',
+					'mapAddress':'
+					Rua Zaqueu Brandão, 82, Térreo - Sala 05, Aracaju - SE',
+					'icon': 'assets/images/pin-dark.png'
+				};
+			
+		</script>
+
 	</body>
 	
 </html>
