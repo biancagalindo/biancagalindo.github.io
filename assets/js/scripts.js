@@ -290,11 +290,11 @@ $(document).ready(function(){
 			
 			var infoWindow = new google.maps.InfoWindow;
 			
-			var pointLatLng = new google.maps.LatLng(mapPoint.lat, mapPoint.lng);
+			var mapLatLng = new google.maps.LatLng(mapPos.lat, mapPos.lng);
 
 			var mapOptions = {
 				zoom: mapPoint.zoom,
-				center: pointLatLng,
+				center: mapLatLng,
 				zoomControl : true,
 				panControl : false,
 				streetViewControl : false,
@@ -306,15 +306,22 @@ $(document).ready(function(){
 			
 			map = new google.maps.Map(document.getElementById("gmap"), mapOptions);
 			
+
+			var markerLatLng = new google.maps.LatLng(mapPoint.lat, mapPoint.lng);
+
 			var marker = new google.maps.Marker({
-				position: pointLatLng, 
+				position: markerLatLng, 
 				map: map, 
-				//title:mapPoint.linkText,
+				title:mapPoint.linkText,
 				icon: mapPoint.icon
 			});
+
+			marker.setMap(map);
+			console.log('OK!');
+			console.log(marker);
 			
 			var mapLink = 'https://www.google.com/maps/preview?ll='+mapPoint.lat+','+mapPoint.lng+'&z=14&q='+mapPoint.mapAddress;
-			
+
 			var html = '<div class="infowin">'
 					+ mapPoint.infoText
 					+ '<a href="'+mapLink+'" target="_blank">'+mapPoint.linkText+'</a>'
