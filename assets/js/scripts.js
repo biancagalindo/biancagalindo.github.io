@@ -79,13 +79,13 @@ $(document).ready(function(){
 		});
 	},{offset:'80%'});
 	/*============================================
-	Filter Projects
+	Filter gallery
 	==============================================*/
 	
-	$('.project-count').each(function(){
+	$('.gallery-count').each(function(){
 	
 		var filter = $(this).parent('.btn').attr('data-filter');
-		$(this).text($('.project-item'+filter).length);
+		$(this).text($('.gallery-item'+filter).length);
 	
 	});
 	
@@ -97,19 +97,19 @@ $(document).ready(function(){
 
 		var category = $(this).attr('data-filter');
 
-		$('.project-item').addClass('filtered');
-		$('.project-item').each(function(){
+		$('.gallery-item').addClass('filtered');
+		$('.gallery-item').each(function(){
 			if($(this).is(category)){
 				$(this).removeClass('filtered');
 			}
 		});
 			
-		$('#projects-container').addClass('anim-out');
+		$('#gallery-container').addClass('anim-out');
 			
 		setTimeout(function(){
-			$('.project-item').show();
-			$('.project-item.filtered').hide();
-			$('#projects-container').removeClass('anim-out');
+			$('.gallery-item').show();
+			$('.gallery-item.filtered').hide();
+			$('#gallery-container').removeClass('anim-out');
 		},450);
 		
 		scrollSpyRefresh();
@@ -117,54 +117,58 @@ $(document).ready(function(){
 	});
 	
 	/*============================================
-	Project Viewer
+	gallery Viewer
 	==============================================*/
 	
-	$('#project-viewer').addClass('add-slider');
+	$('#gallery-viewer').addClass('add-slider');
 	
-	$('.project-item').click(function(e){
+	$('.gallery-item').click(function(e){
+
+		console.log('Testing ok');
 	
 		e.preventDefault();
 		
-		loadProject($(this));
+		loadgallery($(this));
 	
-		$('#project-viewer').modal({backdrop:false});
+		$('#gallery-viewer').modal({backdrop:false});
+
+		console.log('Testing ok 2');
 		
 	})
 	
 	/*Prevent Navbar movement*/
-	$('#project-viewer').on('show.bs.modal',function(){
+	$('#gallery-viewer').on('show.bs.modal',function(){
 		$('#main-nav').width($('#main-nav').width());
 		
 	});
 	
-	$('#project-viewer').on('hidden.bs.modal',function(){
+	$('#gallery-viewer').on('hidden.bs.modal',function(){
 		$('#main-nav').width('auto');
 	});
 	
 	
-	/*Projects navigation*/
-	$('.project-nav .next-project').click(function(){
-		var $newProject = $('.project-item.active').next('.project-item');
-		$('#project-viewer .container').fadeOut(500,function(){loadProject($newProject);});
+	/*gallery navigation*/
+	$('.gallery-nav .next-gallery').click(function(){
+		var $newgallery = $('.gallery-item.active').next('.gallery-item');
+		$('#gallery-viewer .container').fadeOut(500,function(){loadgallery($newgallery);});
 	});
 	
-	$('.project-nav .previous-project').click(function(){
-		var $newProject = $('.project-item.active').prev('.project-item');
-		$('#project-viewer .container').fadeOut(500,function(){loadProject($newProject);});
+	$('.gallery-nav .previous-gallery').click(function(){
+		var $newgallery = $('.gallery-item.active').prev('.gallery-item');
+		$('#gallery-viewer .container').fadeOut(500,function(){loadgallery($newgallery);});
 	});
 	
-	function loadProject($project){
+	function loadgallery($gallery){
 	
-		$('.project-item').removeClass('active');
-		$project.addClass('active');
+		$('.gallery-item').removeClass('active');
+		$gallery.addClass('active');
 		
-		var projectLink = $project.attr('href').replace(/[#?]/g, '');
+		var galleryLink = $gallery.attr('href').replace(/[#?]/g, '');
 		
-		window.location.hash = '?'+projectLink;
+		window.location.hash = '?'+galleryLink;
 		
-		$('#project-viewer-content').load(projectLink,function(){
-			$('#project-viewer .container').fadeIn(500);
+		$('#gallery-viewer-content').load(galleryLink,function(){
+			$('#gallery-viewer .container').fadeIn(500);
 			afterLoadFn();
 		});
 		
@@ -172,16 +176,16 @@ $(document).ready(function(){
 	
 	function afterLoadFn(){
 	
-		$('#project-viewer').scrollTop(0);
+		$('#gallery-viewer').scrollTop(0);
 		
 		/*Show-Hide Nav butttons*/
-		if($('.project-item.active').index()==0){$('#project-viewer .previous-project').addClass('hidden');}
-		else{$('#project-viewer .previous-project').removeClass('hidden');}
+		if($('.gallery-item.active').index()==0){$('#gallery-viewer .previous-gallery').addClass('hidden');}
+		else{$('#gallery-viewer .previous-gallery').removeClass('hidden');}
 	
-		if($('.project-item.active').index()== ($('.project-item').length -1)){$('#project-viewer .next-project').addClass('hidden');}
-		else{$('#project-viewer .next-project').removeClass('hidden');}
+		if($('.gallery-item.active').index()== ($('.gallery-item').length -1)){$('#gallery-viewer .next-gallery').addClass('hidden');}
+		else{$('#gallery-viewer .next-gallery').removeClass('hidden');}
 	
-		$('.project-slider').flexslider({
+		$('.gallery-slider').flexslider({
 			animation:'slide',
 			slideshowSpeed: 4000,
 			useCSS: true,
@@ -194,23 +198,23 @@ $(document).ready(function(){
 		$('.video-container').fitVids();
 	}
 	
-	/*Close project Modal*/
+	/*Close gallery Modal*/
 	
-	$('#project-viewer').on('hidden.bs.modal',function(){
-		$('#project-viewer-content').empty();
-		$('#project-viewer .container').fadeOut();
+	$('#gallery-viewer').on('hidden.bs.modal',function(){
+		$('#gallery-viewer-content').empty();
+		$('#gallery-viewer .container').fadeOut();
 	});
 	
-	$('#project-viewer').on('hide.bs.modal',function(){
+	$('#gallery-viewer').on('hide.bs.modal',function(){
 		window.location.hash = 'portfolio';
 	});
 	
-	/*Open project by url*/
+	/*Open gallery by url*/
 	var reg = /^[#]+[?]/;
 
 	if(reg.test(window.location.hash)){
-		var $project = $('.project-item[href="'+window.location.hash+'"]');
-		$project.trigger('click');
+		var $gallery = $('.gallery-item[href="'+window.location.hash+'"]');
+		$gallery.trigger('click');
 	}
 	
 	/*============================================
@@ -315,10 +319,6 @@ $(document).ready(function(){
 				title:mapPoint.linkText,
 				icon: mapPoint.icon
 			});
-
-			marker.setMap(map);
-			console.log('OK!');
-			console.log(marker);
 			
 			var mapLink = 'https://www.google.com/maps/preview?ll='+mapPoint.lat+','+mapPoint.lng+'&z=14&q='+mapPoint.mapAddress;
 
