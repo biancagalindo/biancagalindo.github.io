@@ -189,10 +189,19 @@ hr{
     padding-bottom:140px;
 }
 
+
+#fb-root {
+    display: none;
+}
+
 .fb-page, 
 .fb-page span, 
 .fb-page span iframe[style] { 
     width: 100% !important; 
+}
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 100% !important;
 }
 
 
