@@ -194,7 +194,7 @@ hr{
     display: none;
 }
 
-.fb-page {
+.fb-col, .fb-page {
 	text-align: center;
 }
 
