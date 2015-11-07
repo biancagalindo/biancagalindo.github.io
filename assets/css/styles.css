@@ -495,38 +495,53 @@ hr{
 	top:15%;
 }
 
+/* -- Header Logo -- */
+
 #home .header-logo{
 	width: 330px;
 }
 
-#home .header-logo .image-header-logo{
+.header-logo .image-header-logo{
 	float: left;
 }
 
-#home .header-logo .text-header-logo{
+.header-logo .text-header-logo{
 	float: left;
 	padding-top: 6px;
 }
 
 
-#home h1{
+.text-header-logo span{
+	display: block;
+}
+
+
+.text-header-logo .font-bianca{
 	font-size: 62px;
 	line-height: 62px;
 	font-weight: 400;
 	margin-bottom: -10px !important;
 }
 
-#home h2{
+.text-header-logo .font-galindo{
 	font-size: 52px;
 	line-height: 52px;
 	font-weight: 400;
 	margin-bottom: -10px !important;
 }
 
-#home p{
+.text-header-logo .font-psicologa{
 	font-size: 17px;
 	line-height: 17px;
 	font-weight: bold;
+}
+
+.text-header-logo .font-aracaju{
+	font-size: 17px;
+	line-height: 17px;
+	font-weight: bold;
+	color: transparent !important;
+	text-shadow: none !important;
 }
 
 #home .header-img{
