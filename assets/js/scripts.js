@@ -123,8 +123,6 @@ $(document).ready(function(){
 	$('#gallery-viewer').addClass('add-slider');
 	
 	$('.gallery-item').click(function(e){
-
-		console.log('Testing ok');
 	
 		e.preventDefault();
 		
@@ -132,7 +130,6 @@ $(document).ready(function(){
 	
 		$('#gallery-viewer').modal({backdrop:false});
 
-		console.log('Testing ok 2');
 		
 	})
 	
@@ -195,7 +192,10 @@ $(document).ready(function(){
 			smoothHeight: false
 		});
 		
-		$('.video-container').fitVids();
+		//
+		// Videos not used yet
+		//
+		//$('.video-container').fitVids();
 	}
 	
 	/*Close gallery Modal*/
@@ -231,7 +231,7 @@ $(document).ready(function(){
 	
 	/*============================================
 	Twitter
-	==============================================*/
+	==============================================
 	var maxTweets = $('#twitter-slider').data('max-tweets'),
 		widgetID = $('#twitter-slider').data('widget-id');
 	
@@ -260,6 +260,8 @@ $(document).ready(function(){
 			smoothHeight: false
 		});
 	}
+	*/
+
 	/*============================================
 	Testimonials
 	==============================================*/
