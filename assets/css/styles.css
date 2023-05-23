@@ -214,14 +214,13 @@ hr{
 }
 
 .bianca-galindo-logo .font-bianca{
-	font-size: 24px;
+	font-size: 30px;
 	line-height: 24px;
-	margin-bottom: -4px
 }
 
 .bianca-galindo-logo .font-galindo{
-	font-size: 20px;
-	line-height: 20px;
+	font-size: 30px;
+	line-height: 24px;
 }
 
 /*------------------
@@ -514,22 +513,21 @@ hr{
 
 
 .text-header-logo .font-bianca{
-	font-size: 62px;
-	line-height: 62px;
+	font-size: 74px;
+	line-height: 50px;
 	font-weight: 400;
 	margin-bottom: -10px !important;
 }
 
 .text-header-logo .font-galindo{
-	font-size: 52px;
-	line-height: 52px;
+	font-size: 74px;
+	line-height: 90px;
 	font-weight: 400;
-	margin-bottom: -10px !important;
 }
 
 .text-header-logo .font-psicologa{
-	font-size: 17px;
-	line-height: 17px;
+	font-size: 18px;
+	line-height: 22px;
 	font-weight: bold;
 }
 
@@ -1674,6 +1672,9 @@ hr{
 	font-weight:900;
 	line-height:37px;
 	letter-spacing: .07em;
+}
+
+#main-footer li a{
 	text-transform: uppercase;
 }
 
