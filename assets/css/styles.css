@@ -26,6 +26,11 @@
 	font-family: 'Sacramento', cursive;
 }
 
+
+.uppercase{
+	text-transform: uppercase;
+}
+
 /*-------------------
 ---- Main Styles ----
 ---------------------*/
@@ -1672,10 +1677,6 @@ hr{
 	font-weight:900;
 	line-height:37px;
 	letter-spacing: .07em;
-}
-
-#main-footer li a{
-	text-transform: uppercase;
 }
 
 #main-footer .social-links a{
