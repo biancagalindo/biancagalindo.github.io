@@ -42,7 +42,7 @@ html,body{
 body{
 	font-family:'Source Sans Pro',Arial,sans-serif;
 	font-size: 16px;
-	color: #89949C;
+	color: #7a3e19;
 	letter-spacing: .01em;
 	overflow-x: hidden;
 	word-wrap: break-word;
@@ -70,14 +70,14 @@ button:focus{
 }
 
 a{
-	color: #00CCCB;
+	color: #7a3e19;
 	-webkit-transition:color .15s ease-out;
 	transition:color .15s ease-out;
 }
 
 a:hover,
 a:focus{
-	color: #89949C;
+	color: #b18d6f;
 	text-decoration: none;
 }
 
@@ -206,34 +206,17 @@ hr{
 ---- Mini Logo -----
 --------------------*/
 
-.bianca-galindo-logo{
+.bianca-galindo-logo img{
+	max-height: 70px;
 }
 
-.bianca-galindo-logo span{
-	display: block;
-	letter-spacing: 0;
-}
-
-.bianca-galindo-logo .text-logo{
-	padding-top: 4px
-}
-
-.bianca-galindo-logo .font-bianca{
-	font-size: 30px;
-	line-height: 24px;
-}
-
-.bianca-galindo-logo .font-galindo{
-	font-size: 30px;
-	line-height: 24px;
-}
 
 /*------------------
 ------ Colors ------
 --------------------*/
 
 .main-color{
-	color:#00CCCB !important;
+	color:#7a3e19 !important;
 }
 
 .bg-color-pink{
@@ -242,7 +225,7 @@ hr{
 }
 
 .bg-main-color{
-	background:#00CCCB;
+	background:#7a3e19;
 	color:#fff;
 }
 
@@ -273,12 +256,13 @@ hr{
 
 
 .shadow-brown{
-	text-shadow: 0px 0px 2px #9A2002;
+	border-bottom: 1px solid rgba(122, 62, 25, 0.5);
+    box-shadow: 0 0px 8px #7a3e19;
 }
 
 
 .border-top-main-color{
-    border-top:7px solid #00CCCB;
+    border-top:7px solid #7a3e19;
 }
 
 .border-top-pink{
@@ -348,7 +332,7 @@ hr{
 .btn-dc.btn-main-color,
 .btn-dc.btn-main-color:hover,
 .btn-dc.btn-main-color:focus{
-	color: #00CCCB;
+	color: #7a3e19;
 }
 
 /*-----------------------
@@ -399,17 +383,29 @@ hr{
 }
 
 #main-nav.scrolled{
-	background: #fff;
-	border-bottom:1px solid #b9c4cC;
+	/*background: #f9eccc;
+	overflow: hidden;*/
+	background: url('../images/header-bg.jpg') no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-size: cover;
+	
+	border-bottom: 1px solid rgba(122, 62, 25, 0.5);
+    box-shadow: 0 0px 8px #7a3e19;
 }
 
 .navbar > .container .navbar-brand{
-	padding: 8px 0 0px 15px;
+	padding: 0;
+	margin-top: -5px;
 }
 
 .navbar-brand{
 	position: relative;
 }
+.navbar-brand img{
+	max-height: 70px;
+}
+
 
 #main-nav.scrolled .navbar-brand:after{
 	position: absolute;
@@ -438,7 +434,7 @@ hr{
 	min-width:120px;
 	font-size: 16px;
 	font-weight: 6400;
-	color:#89949C;
+	color:#7a3e19;
 	text-align: center;
 	background: none;
 	-webkit-transition: color .2s ease-out, padding .3s ease-out;
@@ -450,7 +446,7 @@ hr{
 #site-nav a:focus{
 	padding-top: 4px;
 	padding-bottom:10px;
-	color:#00CCCB !important;
+	color:#b18d6f !important;
 	background: none;
 }
 #site-nav a .fa{
@@ -499,7 +495,7 @@ hr{
 /* -- Header Logo -- */
 
 #home .header-logo{
-	width: 330px;
+	width: 160px;
 }
 
 .header-logo .image-header-logo{
@@ -514,29 +510,17 @@ hr{
 
 .text-header-logo span{
 	display: block;
-}
-
-
-.text-header-logo .font-bianca{
-	font-size: 74px;
-	line-height: 50px;
-	font-weight: 400;
-	margin-bottom: -10px !important;
-}
-
-.text-header-logo .font-galindo{
-	font-size: 74px;
-	line-height: 90px;
-	font-weight: 400;
-}
-
-.text-header-logo .font-psicologa{
 	font-size: 18px;
-	line-height: 22px;
-	font-weight: bold;
 }
 
-.text-header-logo .font-aracaju{
+
+.text-header-logo img{
+	max-width: 160px;
+	margin-bottom: 20px;
+}
+
+
+.text-header-logo{
 	font-size: 17px;
 	line-height: 17px;
 	font-weight: bold;
@@ -548,8 +532,8 @@ hr{
 	position: absolute;
 	bottom: 0;
 	left:50%;
-	width:900px;
-	margin-left:-450px;
+	width:895px;
+	margin-left:-442px;
 	z-index: -1;
 }
 
@@ -587,7 +571,7 @@ hr{
 .scroll-down a:hover{
 	padding-top: 11px;
 	padding-bottom: 9px;
-	color:#00CCCB;
+	color:#7a3e19;
 }
 
 #main-footer .rights{
@@ -635,7 +619,7 @@ hr{
 }
 
 .service-item:hover .service-icon{
-	color:#00CCCB;
+	color:#7a3e19;
 	border-color:transparent;
 }
 
@@ -664,7 +648,7 @@ hr{
 }
 
 .btn-group .btn.active{
-	color:#00CCCB;
+	color:#7a3e19;
 	background:#fff;
 	box-shadow: none;
 }
@@ -736,7 +720,7 @@ hr{
 #milton-erickson .profile h2{
 	margin-top:30px;
 	margin-bottom: 5px;
-	color:#00CCCB;
+	color:#7a3e19;
 }
 
 #milton-erickson .profile h3{
@@ -778,7 +762,7 @@ hr{
 	content: "";
 	width:100%;
 	height:100%;
-	background: #00CCCB;
+	background: #7a3e19;
 	top:0;
 	border:15px solid #fff;
 	border-radius: 50%;
@@ -1035,7 +1019,7 @@ hr{
 	height:100%;
 	top:0;
 	left:0;
-	background: #00CCCB;
+	background: #7a3e19;
 	opacity: .9;
 	z-index: -1;
 }
@@ -1101,7 +1085,7 @@ hr{
 }
 
 #close-gallery-viewer:hover{
-	color: #00CCCB;
+	color: #7a3e19;
 }
 
 #gallery-viewer-content {
@@ -1125,7 +1109,7 @@ hr{
 	left:5px;
 	font-size:24px;
 	font-weight: 400;
-	color: #00CCCB;
+	color: #7a3e19;
 }
 
 #gallery-viewer-content .gallery-title + .gallery-subtitle{
@@ -1145,9 +1129,9 @@ hr{
 
 .gallery-slider .flex-control-nav {bottom: -50px;}
 .gallery-slider .flex-control-nav li {margin: 0 4px;}
-.gallery-slider .flex-control-paging li a {width:10px; height:10px; margin:2px 0;background: #00CCCB;box-shadow:none; border: none; opacity: 1;}
+.gallery-slider .flex-control-paging li a {width:10px; height:10px; margin:2px 0;background: #7a3e19;box-shadow:none; border: none; opacity: 1;}
 .gallery-slider .flex-control-paging li a:hover { }
-.gallery-slider .flex-control-paging li a.flex-active { width:14px; height:14px;background: transparent;border: 2px solid #00CCCB;}
+.gallery-slider .flex-control-paging li a.flex-active { width:14px; height:14px;background: transparent;border: 2px solid #7a3e19;}
 
 
 #gallery-viewer-footer{
@@ -1173,7 +1157,7 @@ hr{
 }
 
 #gallery-viewer-footer .gallery-nav span:hover{
-	color:#00CCCB;
+	color:#7a3e19;
 }
 
 #gallery-viewer-footer .gallery-nav .previous-gallery{
@@ -1274,7 +1258,7 @@ hr{
 }
 
 .testimonial-controls span:hover{
-	color:#00CCCB;
+	color:#7a3e19;
 }
 
 #testimonials .media{
@@ -1457,7 +1441,7 @@ hr{
 	padding: 0;
 	font-size: 38px;
 	font-weight: 400;
-	color:#00CCCB;
+	color:#7a3e19;
 	border-bottom: 2px solid;
 }
 
@@ -1483,7 +1467,7 @@ hr{
 }
 
 #contato .social-links a:hover .fa, #contato .social-links a:hover div{
-	color:#00CCCB !important;
+	color:#7a3e19 !important;
 }
 
 #contact-form .form-group{
@@ -1526,7 +1510,7 @@ hr{
 }
 
 #contact-form .form-control:focus{
-	border-bottom: 2px solid #00CCCB;
+	border-bottom: 2px solid #7a3e19;
 }
 
 #contact-form textarea{
@@ -1581,12 +1565,12 @@ hr{
 
 #contact-form .btn:hover,
 #contact-form .btn:active{
-	color:#00CCCB;
+	color:#7a3e19;
 }
 
 #contact-form .form-group .error-message{
 	margin-left:8px;
-	color:#00CCCB;
+	color:#7a3e19;
 }
 
 #contact-form{
@@ -1648,14 +1632,14 @@ hr{
 #main-footer a,
 #main-footer a:hover,
 #main-footer a:focus{
-	color:#abb3ba;
+	color:#7a3e19;
 	text-decoration: none;
 	-webkit-transition:color .2s ease-out;
 	transition:color .2s ease-out;
 }
 
 #main-footer a:hover{
-	color:#00CCCB;
+	color:#b18d6f;
 }
 
 #main-footer .footer-nav{
@@ -2081,7 +2065,7 @@ hr{
 	#site-nav a:hover,
 	#site-nav a:focus{
 		padding:10px 30px;
-		color:#00CCCB !important;
+		color:#7a3e19 !important;
 		background: none;
 	}
 	
