@@ -1461,12 +1461,12 @@ hr{
 	border-bottom: 2px solid;
 }
 
-#contato .mail-styled:hover,
+/*#contato .mail-styled:hover,
 #contato .mail-styled:focus,
 #contato .mail-styled:active{
-	/*border-bottom-color: transparent;
-	text-decoration: none;*/
-}
+	border-bottom-color: transparent;
+	text-decoration: none;
+}*/
 
 #contato .social-links{
 	margin:30px 0;
@@ -1479,13 +1479,13 @@ hr{
 	transition:color .15s ease-out;
 }
 
-#contato .social-links div{
+/*#contato .social-links div{
 }
 
 #contato .social-links a:hover .fa, #contato .social-links a:hover div{
-	/*color:#c2765e !important;*/
+	color:#c2765e !important;
 }
-
+*/
 #contact-form .form-group{
 	position: relative;
 }
