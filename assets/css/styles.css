@@ -42,7 +42,7 @@ html,body{
 body{
 	font-family:'Source Sans Pro',Arial,sans-serif;
 	font-size: 16px;
-	color: #7a3e19;
+	color: #39444C;
 	letter-spacing: .01em;
 	overflow-x: hidden;
 	word-wrap: break-word;
@@ -60,7 +60,7 @@ h1,h2,h3,h4,h5,h6{
 #main-content{
 	position: relative;
 	background: #fff;
-	box-shadow: 0 -5px 5px rgba(0,0,0,.2);
+	box-shadow: 0 -5px 5px rgb(122, 62, 25, 0.7);
 	z-index: 10;
 }
 
@@ -202,13 +202,7 @@ hr{
 }
 
 
-/*------------------
----- Mini Logo -----
---------------------*/
 
-.bianca-galindo-logo img{
-	max-height: 70px;
-}
 
 
 /*------------------
@@ -219,13 +213,18 @@ hr{
 	color:#7a3e19 !important;
 }
 
-.bg-color-pink{
+.bg-color-salmon{
     color:#fff;
-    background:#F28C83;
+    background:#c2765e;
+}
+
+.bg-color-green{
+    color:#fff;
+    background:#5e7055;
 }
 
 .bg-main-color{
-	background:#7a3e19;
+	background:#b99373; /*#7a3e19*/
 	color:#fff;
 }
 
@@ -335,6 +334,12 @@ hr{
 	color: #7a3e19;
 }
 
+.btn-dc.btn-gray-color,
+.btn-dc.btn-gray-color:hover,
+.btn-dc.btn-gray-color:focus{
+	color: #39444C;
+}
+
 /*-----------------------
 ---- Preloader Styles ----
 -------------------------*/
@@ -402,8 +407,18 @@ hr{
 .navbar-brand{
 	position: relative;
 }
-.navbar-brand img{
+
+/*------------------
+---- Mini Logo -----
+--------------------*/
+
+.bianca-galindo-logo img{
 	max-height: 70px;
+}
+@media (max-width: 767px) {
+    .bianca-galindo-logo img {
+        max-height: 50px;
+    }
 }
 
 
@@ -446,8 +461,9 @@ hr{
 #site-nav a:focus{
 	padding-top: 4px;
 	padding-bottom:10px;
-	color:#b18d6f !important;
-	background: none;
+	color: #c2765e !important;
+    background: none;
+    text-shadow: 1px 1px 2px #fff;
 }
 #site-nav a .fa{
 	display: block;
@@ -565,13 +581,13 @@ hr{
 
 .scroll-down a:focus,
 .scroll-down a:active{
-	color:#89949C;
+	color:#7a3e19;
 }
 
 .scroll-down a:hover{
 	padding-top: 11px;
 	padding-bottom: 9px;
-	color:#7a3e19;
+	color:#532b12;
 }
 
 #main-footer .rights{
@@ -598,7 +614,7 @@ hr{
 	width:180px;
 	height:180px;
 	border:1px solid #ddd;
-	color:#89949C;
+	color:#7a3e19;;
 	border-radius: 50%;
 	overflow: hidden;
 	-webkit-transition: all .2s ease-in;
@@ -619,14 +635,14 @@ hr{
 }
 
 .service-item:hover .service-icon{
-	color:#7a3e19;
+	color:#c2765e;
 	border-color:transparent;
 }
 
 .service-item h3, .service-item h4, .service-item h5, .service-item h6{
 	font-size: 21px;
 	font-weight: 400;
-	color:#39444C;
+	color:#7a3e19;
 }
 
 .btn-group{
@@ -1387,7 +1403,7 @@ hr{
 	height:100%;
 	top:0;
 	left:0;
-	background: #07141f;
+	background: #6d4d32;
 	opacity:.9;
 	z-index: 1;
 }
@@ -1448,8 +1464,8 @@ hr{
 #contato .mail-styled:hover,
 #contato .mail-styled:focus,
 #contato .mail-styled:active{
-	border-bottom-color: transparent;
-	text-decoration: none;
+	/*border-bottom-color: transparent;
+	text-decoration: none;*/
 }
 
 #contato .social-links{
@@ -1467,7 +1483,7 @@ hr{
 }
 
 #contato .social-links a:hover .fa, #contato .social-links a:hover div{
-	color:#7a3e19 !important;
+	/*color:#c2765e !important;*/
 }
 
 #contact-form .form-group{
@@ -1625,7 +1641,11 @@ hr{
 ------------------------*/
 #main-footer{
 	padding:40px 0;
-	background: #fff;
+	background: url(../images/header-bg.jpg) no-repeat;
+    background-attachment: inherit;
+    background-size: 100%;
+    background-size: cover;
+	margin-top: -7px;
 }
 
 
@@ -1639,7 +1659,11 @@ hr{
 }
 
 #main-footer a:hover{
-	color:#b18d6f;
+	color: #c2765e !important;
+    background: none;
+    text-shadow: 1px 1px 2px #ffffffb5;
+	margin-top: 4px;
+    margin-bottom: 10px;
 }
 
 #main-footer .footer-nav{
