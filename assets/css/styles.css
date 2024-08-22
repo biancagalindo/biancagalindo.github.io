@@ -355,12 +355,12 @@ hr{
 
 #page-loader .page-loader-gif{
 	display: block;
-	width:64px;
-	height:64px;
+	width:100px;
+	height:100px;
 	position: absolute;
 	top:50%;
 	left:50%;
-	margin:-32px 0 0 -32px;
+	margin:-50px 0 0 -50px;
 	background: url('../images/preloader.gif') no-repeat;
 }
 
