@@ -511,16 +511,19 @@ hr{
 /* -- Header Logo -- */
 
 #home .header-logo{
-	width: 160px;
+	/*width: 160px;*/
+	width: 380px;
+	padding-top: 100px;
 }
 
 .header-logo .image-header-logo{
-	float: left;
+	/* float: left; */
 }
 
 .header-logo .text-header-logo{
-	float: left;
-	padding-top: 6px;
+	/*float: left;
+	padding-top: 6px;*/
+	text-align: right;
 }
 
 
