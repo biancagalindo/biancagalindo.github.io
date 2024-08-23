@@ -87,6 +87,7 @@ a:focus{
 }
 
 .lead{
+	margin-top: 20px;
 	margin-bottom: 30px;
 	font-size: 28px;
 	font-weight: 300;
@@ -144,7 +145,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 }
 
 .margin-top{
-	margin-top: 60px !important;
+	margin-top: 40px !important;
 }
 
 .row-title{
@@ -2053,6 +2054,7 @@ hr{
 	}
 	
 	.lead{
+		margin-top: 20px;
 		margin-bottom: 30px;
 		font-size: 24px;
 	}
@@ -2157,7 +2159,7 @@ hr{
 	}
 	
 	.btn-group .btn{
-		padding:7px 30px;
+		padding:7px 18px;
 	}
 
 	#btn-group{
@@ -2277,6 +2279,10 @@ hr{
 	#main-footer .rights {
 		font-size: .9em;
 		margin-top: 10px;
+	}
+
+	.service-item .service-icon{
+		display: none;
 	}
 	
 }
