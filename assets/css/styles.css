@@ -416,8 +416,8 @@ hr{
 	max-height: 70px;
 }
 @media (max-width: 767px) {
-    .bianca-galindo-logo img {
-        max-height: 72px;
+    .navbar-header .bianca-galindo-logo img {
+        max-height: 50px;
     }
 }
 
