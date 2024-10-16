@@ -20,6 +20,9 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --color-green: #5e7055; /* Background color for the entire website, including individual sections */
+  --color-brown: #c2765e; /* Background color for the entire website, including individual sections */
+  --color-beige: #f9eccc; /* Background color for the entire website, including individual sections */
   --default-color: #3d4348; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #3e5055; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #7a3e19; /* #388da8 Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -189,6 +192,13 @@ h6 {
   margin: 0 0 0 30px;
   border-radius: 50px;
   transition: 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header .btn-getstarted:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
 .header .btn-getstarted:hover,
@@ -214,7 +224,7 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.3);
 }
 
 /* Index Page Header
@@ -226,8 +236,58 @@ h6 {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: #ffffff;
+  --background-color: #f9eccc;/* #ffffff*/
 }
+
+
+/* Espiral header logo
+------------------------------*/
+.index-page .header .img-espiral {
+  opacity: 0; /* Inicialmente, a imagem está transparente */
+  transition: opacity 1s ease-in-out; /* A opacidade muda em 0.5 segundos com um easing suave */
+}
+.index-page.scrolled .header .img-espiral {
+  animation: girar 2s ease-in-out ;
+  opacity: 1; /* Quando a página é rolada, a opacidade se torna 1 (totalmente visível) */
+}
+
+
+.index-page .hero .img-espiral {
+  opacity: 1; 
+  transition: opacity 1s ease-in-out; 
+  position: relative;
+}
+.index-page.scrolled .hero .img-espiral {
+  opacity: 0; 
+
+}
+
+
+
+.index-page.scrolled  .hero .img-espiral {
+  animation: subir 5s ease-in-out ;
+
+}
+
+@keyframes subir {
+  from {
+    transform: rotate(0deg) translateY(0);
+  }
+  to {
+    transform: rotate(-180deg)translateY(-200px);
+  }
+}
+@keyframes girar {
+  from {
+    transform: rotate(-60deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -514,16 +574,18 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--color-beige);
+  background-color:  var(--color-green);
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
+  box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
 }
 
 .footer .footer-top {
   padding-top: 50px;
 }
+
 
 .footer .footer-about .logo {
   line-height: 1;
@@ -531,7 +593,7 @@ h6 {
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 50px;
   margin-right: 6px;
 }
 
@@ -547,6 +609,16 @@ h6 {
   font-size: 14px;
   font-family: var(--heading-font);
 }
+.footer .footer-about a {
+  color: color-mix(in srgb, var(--color-beige), transparent 30%);
+  display: inline-block;
+  line-height: 1;
+}
+
+.footer .footer-about a:hover {
+  color: var(--accent-color);
+}
+
 
 .footer .social-links a {
   display: flex;
@@ -555,9 +627,9 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, var(--color-beige), transparent 20%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--color-beige), transparent 20%);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -572,6 +644,7 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  color: var(--color-beige);
 }
 
 .footer .footer-links {
@@ -601,7 +674,7 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--color-beige), transparent 30%);
   display: inline-block;
   line-height: 1;
 }
@@ -728,6 +801,7 @@ h6 {
   height: 44px;
   border-radius: 50px;
   transition: all 0.4s;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .scroll-top i {
@@ -853,10 +927,12 @@ section,
   width: 100%;
   min-height: 70vh;
   position: relative;
-  padding: 180px 0 40px 0;
+  padding: 180px 0 0 0; /*180px 0 40px 0;*/
   display: flex;
   align-items: center;
   overflow: hidden;
+  
+
 }
 
 .hero .hero-bg img {
@@ -871,7 +947,7 @@ section,
 
 .hero .hero-bg::before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 15%);
+  /*background: color-mix(in srgb, var(--background-color), transparent 15%);*/
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -880,6 +956,7 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  
 }
 
 .hero h1 {
@@ -921,7 +998,7 @@ section,
   padding: 10px 28px;
   border-radius: 50px;
   transition: 0.5s;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero .btn-get-started:hover {
@@ -977,6 +1054,8 @@ section,
 --------------------------------------------------------------*/
 .featured-services {
   padding: 40px 0;
+  background-color:  var(--color-beige);
+  box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4), inset 0 -7px 9px -7px rgba(0,0,0,0.4);
 }
 
 .featured-services .service-item {
@@ -1138,6 +1217,10 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+.features  {
+  box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+}
+
 .features .nav-tabs {
   border: 0;
 }
@@ -1633,6 +1716,10 @@ section,
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
+.testimonials {
+  box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4), inset 0 -7px 9px -7px rgba(0, 0, 0, 0.4);
+}
+
 .testimonials .testimonial-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
@@ -1959,7 +2046,7 @@ section,
 	width:60px;
 	height:60px;
 	bottom:40px;
-	right:70px;
+	left:40px;
 	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
