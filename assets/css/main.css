@@ -159,12 +159,12 @@ h6 {
 }
 
 .header .logo .logo-espiral {
-  max-height: 40px; /*36px*/
+  max-height: 50px; /*36px*/
   margin-right: 8px;
 }
 
 .header .logo .logo-name {
-  max-height: 50px; /*36px*/
+  max-height: 40px; /*36px*/
   margin-right: 8px;
 }
 
@@ -183,6 +183,18 @@ h6 {
   .header .logo img {
     max-height: 24px;
   }
+
+  .header .logo .logo-espiral {
+    max-height: 40px; /*36px*/
+    margin-right: 8px;
+  }
+  
+  .header .logo .logo-name {
+    max-width: 210px; /*36px*/
+    max-height: 40px; /*36px*/
+    margin-right: 8px;
+  }
+  
 
   .header .logo h1 {
     font-size: 24px;
