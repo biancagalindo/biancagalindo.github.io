@@ -752,10 +752,15 @@ h6 {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+.footer .footer-contact, .footer .social-links {
+  padding-left: 10px;
+  /*border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);*/
+}
+
 .footer .copyright {
   padding-top: 20px;
   padding-bottom: 22px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  /*border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);*/
 }
 
 .footer .copyright p {
