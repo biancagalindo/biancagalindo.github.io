@@ -638,7 +638,7 @@ h6 {
 }
 
 .footer .footer-about a:hover {
-  color: var(--accent-color);
+  color: var(--color-beige)
 }
 
 
@@ -657,8 +657,8 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: #fff; /*var(--accent-color)*/
+  border-color: #fff; /*var(--accent-color)*/
 }
 
 .footer h4 {
@@ -823,7 +823,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: #c2765e; /*var(--accent-color)*/
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -838,7 +838,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 40%);
   color: var(--contrast-color);
 }
 
@@ -2109,10 +2109,10 @@ section,
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:20px;
+	bottom:-60px;
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Adjust for centering */
-	background-color:#25d366;
+  background-color: #25d366;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
@@ -2121,6 +2121,18 @@ section,
   z-index:100;
   padding-left: 2px;
 }
+
+
+
+.index-page.scrolled .whatsapp-float-center {
+	bottom:20px;
+}
+
+.whatsapp-float-left:hover, .whatsapp-float-center:hover {
+  background-color: color-mix(in srgb, #25d366, transparent 40%);
+  color:#FFF;
+}
+
 
 
 .whatsapp-my-float{
