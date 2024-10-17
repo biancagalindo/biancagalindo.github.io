@@ -21,10 +21,11 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --color-green: #5e7055; /* Background color for the entire website, including individual sections */
-  --color-brown: #c2765e; /* Background color for the entire website, including individual sections */
+  --color-earth: #c2765e; /*#c2765e Background color for the entire website, including individual sections */
+  --color-brown: #7a3e19; /*#c2765e Background color for the entire website, including individual sections */
   --color-beige: #f9eccc; /* Background color for the entire website, including individual sections */
-  --default-color: #3d4348; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #3e5055; /* Color for headings, subheadings and title throughout the website */
+  --default-color: #2c2f31; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #7a3e19; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #7a3e19; /* #388da8 Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -157,8 +158,13 @@ h6 {
   line-height: 1;
 }
 
-.header .logo img {
+.header .logo .logo-espiral {
   max-height: 40px; /*36px*/
+  margin-right: 8px;
+}
+
+.header .logo .logo-name {
+  max-height: 50px; /*36px*/
   margin-right: 8px;
 }
 
@@ -242,29 +248,29 @@ h6 {
 
 /* Espiral header logo
 ------------------------------*/
-.index-page .header .img-espiral {
+.index-page .header .logo-espiral {
   opacity: 0; /* Inicialmente, a imagem está transparente */
   transition: opacity 1s ease-in-out; /* A opacidade muda em 0.5 segundos com um easing suave */
 }
-.index-page.scrolled .header .img-espiral {
+.index-page.scrolled .header .logo-espiral {
   animation: girar 2s ease-in-out ;
   opacity: 1; /* Quando a página é rolada, a opacidade se torna 1 (totalmente visível) */
 }
 
 
-.index-page .hero .img-espiral {
+.index-page .hero .logo-espiral {
   opacity: 1; 
   transition: opacity 1s ease-in-out; 
   position: relative;
 }
-.index-page.scrolled .hero .img-espiral {
+.index-page.scrolled .hero .logo-espiral {
   opacity: 0; 
 
 }
 
 
 
-.index-page.scrolled  .hero .img-espiral {
+.index-page.scrolled  .hero .logo-espiral {
   animation: subir 5s ease-in-out ;
 
 }
@@ -592,7 +598,7 @@ h6 {
 }
 
 .footer .footer-about .logo img {
-  max-height: 50px;
+  max-height: 52px;
   margin-right: 6px;
 }
 
@@ -926,7 +932,7 @@ section,
   width: 100%;
   min-height: 70vh;
   position: relative;
-  padding: 180px 0 0 0; /*180px 0 40px 0;*/
+  padding: 140px 0 0 0; /*180px 0 40px 0;*/
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1053,9 +1059,15 @@ section,
 --------------------------------------------------------------*/
 .featured-services {
   padding: 40px 0;
-  background-color:  var(--color-beige);
+  background-color:  #abb48a;
   box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4), inset 0 -7px 9px -7px rgba(0,0,0,0.4);
+  background-image: url("../img/background-green.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto; /* auto 100%; Adjust the height to fit your image */
+
 }
+
 
 .featured-services .service-item {
   position: relative;
@@ -1063,7 +1075,7 @@ section,
 }
 
 .featured-services .service-item .icon {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
   width: 72px;
   height: 72px;
   position: relative;
@@ -1098,10 +1110,11 @@ section,
 
 .featured-services .service-item .description {
   font-size: 14px;
+  color: var(--default-color);
 }
 
 .featured-services .service-item:hover .icon {
-  background-color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
 .featured-services .service-item:hover .icon i {
@@ -1716,7 +1729,12 @@ section,
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials {
-  box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4), inset 0 -7px 9px -7px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-beige);
+  box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4), inset 0 -7px 9px -7px rgba(0,0,0,0.4);
+  background-image: url("../img/background-biege.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto; /* auto 100%; Adjust the height to fit your image */
 }
 
 .testimonials .testimonial-item {
