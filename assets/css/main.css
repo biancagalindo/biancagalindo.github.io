@@ -163,7 +163,7 @@ h6 {
   margin-right: 8px;
 }
 
-.header .logo .logo-name {
+.header .logo .logo-nome {
   max-height: 40px; /*36px*/
   margin-right: 8px;
 }
@@ -189,7 +189,7 @@ h6 {
     margin-right: 8px;
   }
   
-  .header .logo .logo-name {
+  .header .logo .logo-nome {
     max-width: 210px; /*36px*/
     max-height: 40px; /*36px*/
     margin-right: 8px;
@@ -268,14 +268,35 @@ h6 {
   animation: girar 2s ease-in-out ;
   opacity: 1; /* Quando a página é rolada, a opacidade se torna 1 (totalmente visível) */
 }
+.index-page .header .logo-nome {
+  opacity: 0; /* Inicialmente, a imagem está transparente */
+  transition: opacity 1s ease-in-out; /* A opacidade muda em 0.5 segundos com um easing suave */
+}
+.index-page.scrolled .header .logo-nome {
+  animation: chegar 1s ease-in-out ;
+  opacity: 1; /* Quando a página é rolada, a opacidade se torna 1 (totalmente visível) */
+}
+
 
 
 .index-page .hero .logo-espiral {
+  width: 80%;
   opacity: 1; 
   transition: opacity 1s ease-in-out; 
   position: relative;
 }
 .index-page.scrolled .hero .logo-espiral {
+  opacity: 0; 
+
+}
+
+.index-page .hero .logo-nome {
+  width: 100%;
+  opacity: 1; 
+  transition: opacity 1s ease-in-out; 
+  position: relative;
+}
+.index-page.scrolled .hero .logo-nome {
   opacity: 0; 
 
 }
@@ -287,6 +308,14 @@ h6 {
 
 }
 
+@keyframes chegar {
+  from {
+    transform: translateY(-80px);
+  }
+  to {
+    transform:  translateY(0);
+  }
+}
 @keyframes subir {
   from {
     transform: rotate(0deg) translateY(0);
@@ -962,7 +991,7 @@ section,
 
 @media (max-width: 480px) {
   .hero {
-    padding: 100px 0 0 0; /*180px 0 40px 0;*/
+    padding: 60px 0 0 0; /*180px 0 40px 0;*/
   }
 }
 
