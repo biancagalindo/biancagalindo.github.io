@@ -1051,12 +1051,24 @@ section,
 }
 
 .hero .hero-img {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 @media (min-width: 768px) {
   .hero .hero-img {
     max-width: 600px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .hero .container {
+    padding-bottom: 300px;
+  }
+  .hero .hero-img {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
   }
 }
 
